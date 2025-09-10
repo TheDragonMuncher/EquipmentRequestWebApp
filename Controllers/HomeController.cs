@@ -10,4 +10,9 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    public ViewResult RequestForm()
+    {
+        return View();
+    }
 }
