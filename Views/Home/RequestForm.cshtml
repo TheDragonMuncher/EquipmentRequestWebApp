@@ -16,11 +16,11 @@
             </div>
             <div>
                 <label asp-for="email">Email: </label>
-                <input asp-for="email"/>
+                <input asp-for="email" placeholder="name@collegename.ca"/>
             </div>
             <div>
                 <label asp-for="phoneNumber">Phone Number: </label>
-                <input asp-for="phoneNumber"/>
+                <input asp-for="phoneNumber" placeholder="XXX-XXX-XXXX"/>
             </div>
             <div>
                 <label asp-for="role">Role: </label>
@@ -34,7 +34,7 @@
                 <label asp-for="equipmentType">Equipment Type: </label>
                 <select asp-for="equipmentType">
                     <option value="">Choose an option</option>
-                    <option value="paptop">Laptop</option>
+                    <option value="laptop">Laptop</option>
                     <option value="phone">Phone</option>
                     <option value="tablet">Tablet</option>
                     <option value="other">Other</option>
@@ -48,6 +48,7 @@
                 <label asp-for="duration">Duration of Request (Days): </label>
                 <input asp-for="duration"/>
             </div>
+            <button type="submit">Submit Request</button>
         </form>
     </body>
 </html>
