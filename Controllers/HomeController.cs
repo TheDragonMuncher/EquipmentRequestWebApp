@@ -17,10 +17,9 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public ViewResult RequestFrom(EquipmentRequestModel equipmentRequestModel)
+    public ViewResult RequestFrom(EquipmentRequestModel request)
     {
-        //TODO: save data
-
+        Repository.AddRequest(request);
         return View();
     }
 }
