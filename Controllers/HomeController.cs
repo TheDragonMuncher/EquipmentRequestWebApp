@@ -19,7 +19,8 @@ public class HomeController : Controller
     [HttpPost]
     public ViewResult RequestFrom(EquipmentRequestModel request)
     {
+        request.GiveId();
         Repository.AddRequest(request);
-        return View();
+        return View("Confirmation", request);
     }
 }

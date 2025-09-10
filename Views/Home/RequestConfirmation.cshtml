@@ -1,0 +1,22 @@
+@model Assignment1.models.EquipmentRequestModel;
+@{
+    ViewData["Title"] = "Confirmation";
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+    </head>
+    <body>
+        <div>
+            @Model.name
+            @Model.email
+            @Model.phoneNumber
+            @Model.role
+            @Model.equipmentType
+            @Model.details
+            @Model.duration
+        </div>
+    </body>
+</html>
