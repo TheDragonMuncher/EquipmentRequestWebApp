@@ -18,12 +18,13 @@
                     <tr><th>ID</th><th>Type</th><th>Description</th><th>Availability</th></tr>
                 </thead>
                 <tbody>
-                    @foreach (Assignment1.Models.EquipmentModel e in Model!){
+                    @foreach (Assignment1.Models.EquipmentModel e in Model!)
+                    {
                         <tr>
-                            <td>e.id</td>
-                            <td>e.type</td>
-                            <td>e.description</td>
-                            <td>e.available</td>
+                            <td>@e.id</td>
+                            <td>@e.type</td>
+                            <td>@e.description</td>
+                            <td>@e.available</td>
                         </tr>
                     }
                 </tbody>
