@@ -22,6 +22,6 @@ public class HomeController : Controller
     {
         request.GiveId();
         Repository.AddRequest(request);
-        return View("Confirmation", request);
+        return View("RequestConfirmation", request);
     }
 }
