@@ -39,4 +39,9 @@ public class HomeController : Controller
     {
         return View(Repository.Equipment.Where(e => e.available == true));
     }
+
+    public ViewResult Requests()
+    {
+        return View(Repository.Requests);
+    }
 }

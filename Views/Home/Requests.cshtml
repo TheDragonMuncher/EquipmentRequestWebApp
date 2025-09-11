@@ -1,0 +1,35 @@
+@model IEnumerable<Assignment1.Models.EquipmentRequestModel>;
+@{
+    ViewData["Title"] = "Requests";
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+    </head>
+    <body>
+        <div>
+            <h2>Equipment Requests</h2>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr><th>Equipment Type</th><th>Name</th><th>Role</th></tr>
+                </thead>
+                <tbody>
+                    @foreach (Assignment1.Models.EquipmentRequestModel r in Model!)
+                    {
+                        <tr>
+                            <td>@r.equipmentType</td>
+                            <td>@r.name</td>
+                            <td>@r.role</td>
+                            <td><button>Accept</button></td>
+                            <td><button>Deny</button></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
