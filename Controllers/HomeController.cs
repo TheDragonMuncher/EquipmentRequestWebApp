@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Assignment1.models;
+using Assignment1.Models;
 
 namespace Assignment1.Controllers;
 

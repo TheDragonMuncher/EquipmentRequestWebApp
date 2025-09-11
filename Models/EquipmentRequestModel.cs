@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Assignment1.models
+namespace Assignment1.Models
 {
     public class EquipmentRequestModel
     {
