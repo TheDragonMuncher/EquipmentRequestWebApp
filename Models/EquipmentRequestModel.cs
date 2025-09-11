@@ -4,8 +4,10 @@ namespace Assignment1.Models
 {
     public class EquipmentRequestModel
     {
+        // static id counter
         private static int idCounter = 0;
 
+        // model variables with validation
         public int id = 0;
 
         [Required(ErrorMessage = "Please enter your name.")]
@@ -32,6 +34,7 @@ namespace Assignment1.Models
         public int? duration { get; set; }
 
 
+        // model method to assign ids to objects
         public void GiveId()
         {
             idCounter++;

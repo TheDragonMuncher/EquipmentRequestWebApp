@@ -2,9 +2,11 @@ namespace Assignment1.Models
 {
     public static class Repository
     {
+        // list and IEnumerable for equipment requests
         private static List<EquipmentRequestModel> requests = new();
         public static IEnumerable<EquipmentRequestModel> Requests => requests;
 
+        // predefined list and IEnumerable for equipment
         private static List<EquipmentModel> equipmentList = [
             new EquipmentModel {
                 id = 1,
@@ -64,6 +66,7 @@ namespace Assignment1.Models
         public static IEnumerable<EquipmentModel> Equipment => equipmentList;
 
 
+        // method for adding requests to stored list
         public static void AddRequest(EquipmentRequestModel request)
         {
             Console.WriteLine(request);
