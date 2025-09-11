@@ -20,8 +20,15 @@ public class HomeController : Controller
     [HttpPost]
     public ViewResult RequestForm(EquipmentRequestModel request)
     {
-        request.GiveId();
-        Repository.AddRequest(request);
-        return View("RequestConfirmation", request);
+        if (ModelState.IsValid)
+        {
+            request.GiveId();
+            Repository.AddRequest(request);
+            return View("RequestConfirmation", request);
+        }
+        else
+        {
+            return View();
+        }
     }
 }

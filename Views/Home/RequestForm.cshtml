@@ -10,6 +10,7 @@
     </head>
     <body>
         <form asp-action="RequestForm" method="post">
+            <div asp-validation-summary="All"></div>
             <div>
                 <label asp-for="name">Name: </label>
                 <input asp-for="name"/>
