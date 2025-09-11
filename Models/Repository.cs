@@ -16,13 +16,13 @@ namespace Assignment1.Models
                 id = 2,
                 type = "Laptop",
                 description = "Portable Workspace",
-                available = true
+                available = false
             },
             new EquipmentModel {
                 id = 3,
                 type = "Laptop",
                 description = "Portable Workspace",
-                available = true
+                available = false
             },
             new EquipmentModel {
                 id = 4,
@@ -34,7 +34,7 @@ namespace Assignment1.Models
                 id = 5,
                 type = "Phone",
                 description = "For Work Calls",
-                available = true
+                available = false
             },
             new EquipmentModel {
                 id = 6,
@@ -46,19 +46,19 @@ namespace Assignment1.Models
                 id = 7,
                 type = "Tablet",
                 description = "For The Kid(s)",
-                available = true
+                available = false
             },
             new EquipmentModel {
                 id = 8,
                 type = "Tablet",
                 description = "For The Kid(s)",
-                available = true
+                available = false
             },
             new EquipmentModel {
                 id = 9,
                 type = "Tablet",
                 description = "For The Kid(s)",
-                available = true
+                available = false
             }
         ];
         public static IEnumerable<EquipmentModel> Equipment => equipmentList;

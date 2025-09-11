@@ -35,4 +35,8 @@ public class HomeController : Controller
     {
         return View(Repository.Equipment);
     }
+    public ViewResult AvailableEquipment()
+    {
+        return View(Repository.Equipment.Where(e => e.available == true));
+    }
 }
