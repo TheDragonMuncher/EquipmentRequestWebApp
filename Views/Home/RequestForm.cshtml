@@ -7,33 +7,34 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
         <form asp-action="RequestForm" method="post">
             <div asp-validation-summary="All"></div>
-            <div>
+            <div class="form-group">
                 <label asp-for="name">Name: </label>
-                <input asp-for="name"/>
+                <input asp-for="name" class="form-control"/>
             </div>
-            <div>
+            <div class="form-group">
                 <label asp-for="email">Email: </label>
-                <input asp-for="email" placeholder="name@collegename.ca"/>
+                <input asp-for="email" placeholder="name@collegename.ca" class="form-control"/>
             </div>
-            <div>
+            <div class="form-group">
                 <label asp-for="phoneNumber">Phone Number: </label>
-                <input asp-for="phoneNumber" placeholder="XXX-XXX-XXXX"/>
+                <input asp-for="phoneNumber" placeholder="XXX-XXX-XXXX" class="form-control"/>
             </div>
-            <div>
+            <div class="form-group">
                 <label asp-for="role">Role: </label>
-                <select asp-for="role">
+                <select asp-for="role" class="form-control">
                     <option value="">Choose an option</option>
                     <option value="Student">Student</option>
                     <option value="Professor">Professor</option>
                 </select>
             </div>
-            <div>
+            <div class="form-group">
                 <label asp-for="equipmentType">Equipment Type: </label>
-                <select asp-for="equipmentType">
+                <select asp-for="equipmentType" class="form-control">
                     <option value="">Choose an option</option>
                     <option value="Laptop">Laptop</option>
                     <option value="Phone">Phone</option>
@@ -41,15 +42,17 @@
                     <option value="Other">Other</option>
                 </select>
             </div>
-            <div>
+            <div class="form-group">
                 <label asp-for="details">Request Details: </label>
-                <input asp-for="details"/>
+                <input asp-for="details" class="form-control"/>
             </div>
-            <div>
+            <div class="form-group">
                 <label asp-for="duration">Duration of Request (Days): </label>
-                <input asp-for="duration"/>
+                <input asp-for="duration" class="form-control"/>
             </div>
-            <button type="submit">Submit Request</button>
+            <div  class="form-group">
+                <button type="submit" class="btn btn-primary">Submit Request</button>
+            </div>
         </form>
     </body>
 </html>

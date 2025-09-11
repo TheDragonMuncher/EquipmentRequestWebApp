@@ -7,15 +7,22 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
         <div>
             <h2>Equipment Requests</h2>
         </div>
         <div>
-            <table>
-                <thead>
-                    <tr><th>Equipment Type</th><th>Name</th><th>Role</th></tr>
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Equipment Type</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Role</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
                 </thead>
                 <tbody>
                     @foreach (Assignment1.Models.EquipmentRequestModel r in Model!)
@@ -24,8 +31,8 @@
                             <td>@r.equipmentType</td>
                             <td>@r.name</td>
                             <td>@r.role</td>
-                            <td><button>Accept</button></td>
-                            <td><button>Deny</button></td>
+                            <td><button class="btn btn-success">Accept</button></td>
+                            <td><button class="btn btn-danger">Deny</button></td>
                         </tr>
                     }
                 </tbody>
