@@ -4,7 +4,7 @@ namespace Assignment1.models
     {
         private static int idCounter = 0;
 
-        public int id;
+        public int id = 0;
         public string? name { get; set; }
         public string? email { get; set; }
         public string? phoneNumber { get; set; }

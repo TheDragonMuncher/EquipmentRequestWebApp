@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Assignment1.models;
 
@@ -17,7 +18,7 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public ViewResult RequestFrom(EquipmentRequestModel request)
+    public ViewResult RequestForm(EquipmentRequestModel request)
     {
         request.GiveId();
         Repository.AddRequest(request);
