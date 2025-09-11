@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Assignment1.models;
 
@@ -30,5 +29,10 @@ public class HomeController : Controller
         {
             return View();
         }
+    }
+
+    public ViewResult AllEquipment()
+    {
+        return View(Repository.Equipment);
     }
 }
