@@ -1,7 +1,16 @@
+using Assignment1.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<FastEquipmentDbContext>(opts =>
+{
+    opts.UseSqlite(
+        builder.Configuration["ConnectionStrings:EquipmentRequesterConnection"]
+    );
+});
 
 var app = builder.Build();
 
