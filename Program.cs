@@ -1,4 +1,4 @@
-using Assignment1.Models;
+using FastEquipment.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

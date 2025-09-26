@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Assignment1.Models
+namespace FastEquipment.Models
 {
     public class FastEquipmentDbContext : DbContext
     {

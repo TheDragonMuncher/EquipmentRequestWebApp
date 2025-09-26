@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using Assignment1.Models;
+using FastEquipment.Models;
 
-namespace Assignment1.Controllers;
+namespace FastEquipment.Controllers;
 
 public class HomeController : Controller
 {

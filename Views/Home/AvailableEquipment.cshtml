@@ -1,4 +1,4 @@
-@model IEnumerable<Assignment1.Models.EquipmentModel>;
+@model IEnumerable<FastEquipment.Models.EquipmentModel>;
 @{
     ViewData["Title"] = "Available Equipment";
 }
@@ -24,7 +24,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (Assignment1.Models.EquipmentModel e in Model!)
+                    @foreach (FastEquipment.Models.EquipmentModel e in Model!)
                     {
                         <tr>
                             <td>@e.id</td>
