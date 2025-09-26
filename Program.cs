@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<FastEquipmentDbContext>(opts =>
 {
     opts.UseSqlite(
-        builder.Configuration["ConnectionStrings:EquipmentRequesterConnection"]
+        builder.Configuration.GetConnectionString("FastEquipmentDb")
     );
 });
 
