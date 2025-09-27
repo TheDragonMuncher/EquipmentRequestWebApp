@@ -6,7 +6,7 @@ namespace FastEquipment.Models
     {
         public FastEquipmentDbContext(DbContextOptions<FastEquipmentDbContext> options) : base(options) { }
 
-        public DbSet<EquipmentModel> Equipment => Set<EquipmentModel>();
-        public DbSet<EquipmentRequestModel> Requests => Set<EquipmentRequestModel>();
+        public DbSet<Equipment> Equipment => Set<Equipment>();
+        public DbSet<EquipmentRequest> Requests => Set<EquipmentRequest>();
     }
 }

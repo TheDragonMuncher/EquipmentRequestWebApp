@@ -1,4 +1,4 @@
-@model IEnumerable<FastEquipment.Models.EquipmentRequestModel>;
+@model IEnumerable<FastEquipment.Models.EquipmentRequest>;
 @{
     ViewData["Title"] = "Requests";
 }
@@ -25,12 +25,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (FastEquipment.Models.EquipmentRequestModel r in Model!)
+                    @foreach (FastEquipment.Models.EquipmentRequest r in Model!)
                     {
                         <tr>
-                            <td>@r.equipmentType</td>
-                            <td>@r.name</td>
-                            <td>@r.role</td>
+                            <td>@r.EquipmentType</td>
+                            <td>@r.Name</td>
+                            <td>@r.Role</td>
                             <td><button class="btn btn-success">Accept</button></td>
                             <td><button class="btn btn-danger">Deny</button></td>
                         </tr>

@@ -20,11 +20,11 @@ public class HomeController : Controller
 
     // view for submitting request form data 
     [HttpPost]
-    public ViewResult RequestForm(EquipmentRequestModel request)
+    public ViewResult RequestForm(EquipmentRequest request)
     {
         if (ModelState.IsValid) // validation
         {
-            request.GiveId();
+            // request.GiveId();
             Repository.AddRequest(request);
             return View("RequestConfirmation", request);
         }
@@ -41,7 +41,7 @@ public class HomeController : Controller
     }
     public ViewResult AvailableEquipment()
     {
-        return View(Repository.Equipment.Where(e => e.available == true));
+        return View(Repository.Equipment.Where(e => e.Available == true));
     }
 
     // admin view
