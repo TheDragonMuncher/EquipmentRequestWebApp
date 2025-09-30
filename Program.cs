@@ -1,4 +1,4 @@
-using FastEquipment.Models;
+using FastEquipment.Models.DataHandling;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

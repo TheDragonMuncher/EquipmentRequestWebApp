@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace FastEquipment.Models
+namespace FastEquipment.Models.DataHandling
 {
     public class SeedData
     {

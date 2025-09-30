@@ -7,11 +7,9 @@ namespace FastEquipment.Models
     [PrimaryKey(nameof(EquipmentRequestId))]
     public class EquipmentRequest
     {
-        // static id counter
-        private static int idCounter = 0;
 
         // model variables with validation
-        public int EquipmentRequestId = 0;
+        public int EquipmentRequestId { get; set; }
 
         [Required(ErrorMessage = "Please enter your name.")]
         public string? Name { get; set; }
@@ -39,16 +37,8 @@ namespace FastEquipment.Models
         [Range(1, int.MaxValue, ErrorMessage = "Please enter a positive duration for the request.")]
         public int? Duration { get; set; }
 
-        public Status RequestStatus { get; set; } = Status.Pending;
+        public StatusEnum RequestStatus { get; set; } = StatusEnum.Pending;
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
-
-
-        // model method to assign ids to objects
-        // public void GiveId()
-        // {
-        //     idCounter++;
-        //     EquipmentRequestId = idCounter;
-        // }
     }
 }

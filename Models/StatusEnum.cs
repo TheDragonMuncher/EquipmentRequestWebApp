@@ -1,6 +1,6 @@
 namespace FastEquipment.Models
 {
-    public enum Status
+    public enum StatusEnum
     {
         Pending,
         Accepted,
