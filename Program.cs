@@ -11,6 +11,8 @@ builder.Services.AddDbContext<FastEquipmentDbContext>(opts =>
         builder.Configuration.GetConnectionString("FastEquipmentDb")
     );
 });
+builder.Services.AddScoped<IEquipmentRepository, EFEquipmentRepository>();
+builder.Services.AddScoped<IEquipmentRequestRepository, EFEquipmentRequestRepository>();
 
 var app = builder.Build();
 

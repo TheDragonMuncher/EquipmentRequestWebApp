@@ -1,10 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
 using FastEquipment.Models;
+using FastEquipment.Models.DataHandling;
 
 namespace FastEquipment.Controllers;
 
 public class HomeController : Controller
 {
+    private IEquipmentRepository equipmentRepository;
+    private IEquipmentRequestRepository equipmentRequestRepository;
+    public HomeController(IEquipmentRepository er, IEquipmentRequestRepository err)
+    {
+        equipmentRepository = er;
+        equipmentRequestRepository = err;
+    }
     // home view
     public IActionResult Index()
     {
@@ -25,7 +33,8 @@ public class HomeController : Controller
         if (ModelState.IsValid) // validation
         {
             // request.GiveId();
-            Repository.AddRequest(request);
+            equipmentRequestRepository.Add(request);
+            equipmentRepository.Update();
             return View("RequestConfirmation", request);
         }
         else
@@ -37,16 +46,16 @@ public class HomeController : Controller
     // views for displaying tables of equipment
     public ViewResult AllEquipment()
     {
-        return View(Repository.Equipment);
+        return View(equipmentRepository.GetAll());
     }
     public ViewResult AvailableEquipment()
     {
-        return View(Repository.Equipment.Where(e => e.Available == true));
+        return View(equipmentRepository.GetAvailable());
     }
 
     // admin view
     public ViewResult Requests()
     {
-        return View(Repository.Requests);
+        return View(equipmentRequestRepository.GetAll());
     }
 }
